@@ -31,7 +31,23 @@ class MyAdapter extends ArrayAdapter<String> {
 
         ImageView theImageView = (ImageView) theView.findViewById((R.id.imageView1));
 
-        theImageView.setImageResource(R.drawable.dot);
+        switch (position) {
+            case 1:
+                theImageView.setImageResource(R.drawable.apple);
+                break;
+            case 2:
+                theImageView.setImageResource(R.drawable.circle);
+                break;
+            case 3:
+                theImageView.setImageResource(R.drawable.photo);
+                break;
+            case 4:
+                theImageView.setImageResource(R.drawable.info);
+                break;
+            default:
+                theImageView.setImageResource(R.drawable.dot);
+        }
+
 
         return theView;
     }
